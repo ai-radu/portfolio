@@ -1,0 +1,54 @@
+<!DOCTYPE html ✟>
+<html lang="en">
+    <head>
+        <title>portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta property="og:title" content="ai-radu-portfolio">
+        <meta itemprop="name" content="portoflio">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="others/website.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="others/website.ico" type="image/x-icon">
+    </head>
+    <body style="flex-direction: row">
+        <div class="div2" style="display: flex; flex-direction: column; height: 100vh;">
+            <header class="border">
+                <div class="marquee-wrapper">
+                    <span class="marquee-text" style="color: aliceblue;" data-text="Linked websites can, and will have different licenses. Please check to be sure and always credit the author!"></span>
+                </div>
+                <button id="bmain1" style="flex: 1" onclick="pMain('games.html','games_sidebar.html','bmain1')" aria-label="View Games Category" aria-current="true">Games</button>
+                <button id="bmain2" style="flex: 1" onclick="pMain('software.html','software_sidebar.html','bmain2')" aria-label="View Software Category">Software</button>
+                <button id="bmain3" style="flex: 1" onclick="pMain('3d_models.html','3d_models_sidebar.html','bmain3')" aria-label="View 3D Models Category">3D-Models</button>
+                <button id="bmain4" style="flex: 1" onclick="pMain('artwork.html','artwork_sidebar.html','bmain4')" aria-label="View Artwork Category">Artwork</button>
+                <button id="bmain5" style="flex: 1" onclick="pMain('audio.html','audio_sidebar.html','bmain5')" aria-label="View Audio Category">Audio</button>
+                <button id="bmain6" class="border" onclick="pMain('about.html','','bmain6')" aria-label="View About Section">
+                    <img src="others/airaducontact.gif" style="width: 88px; height: 31px">
+                </button>
+            </header>
+            <div class="container" style="flex-direction: row;">
+                <div class="container sidebar-container" style="flex-direction: column; max-width: 150px;">
+                    <iframe id="sidebar-frame" src="games_sidebar.html"></iframe>
+                </div>
+                <iframe id="main-frame" src="games.html"></iframe>
+            </div>
+            <footer class="border" style="flex-direction: column;">
+                <div style="display: flex">
+                    <span class="arrowU">▼</span>
+                    <div class="marquee-wrapper" style="max-width: 97.5vw">
+                        <span class="marquee-text" style="color: aliceblue;" data-text="I like to spend my time browsing the internet. If you have a cool / funky / useful / interesting website, your button must be here somewhere. ⊛ In no particular order. ⊛ Anything goes. ⊛ Don't hate. ⊛ Don't judge. ⊛ Some of them don't go anywhere."></span>
+                    </div>
+                    <span class="arrowU">▼</span>
+                </div>
+                <div class="container" style="flex-direction: row;">
+                    <div class='marquee-wrapper' style="min-width: 100%;">
+                        <div class="marquee-buttons">
+                            <div class="marquee-buttons-inner"></div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div id="tooltip"></div>
+        <script src="script.js"></script>
+    </body>
+</html>
