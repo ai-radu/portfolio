@@ -189,7 +189,7 @@ img {
     width: 100%;
     height: calc(100vh - 81px);
     border: none;
-    background-image: url(others/swirlbk.gif);
+    background-color: #000000;
     display: flex;
     flex: 1;
     flex-direction: column;}
