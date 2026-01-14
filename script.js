@@ -27,7 +27,7 @@ function pMain(mainPage, activeId)
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    pMain('Home_Page.html', 'Button_Main_0');
+    pMain('home.html', 'Button_Main_0');
 });
 
 // marquee
