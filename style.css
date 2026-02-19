@@ -1,9 +1,3 @@
-@keyframes pulse {
-    0% {transform: scale(.95); color: white; color: black;}
-    25% {transform: scale(1.05); color: white; color: black;}
-    40% {transform: scale(.95); color: white; color: black;}
-    60% {transform: scale(1.05); color: white; color: black;}
-    100% {transform: scale(.95); color: white; color: black;}}
 @keyframes marquee {
     0% {transform: translateX(0);}
     100% {transform: translateX(calc(-100% + var(--container-width)));}}
@@ -287,30 +281,6 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;}
-#tooltip {
-    position: fixed;
-    background-image: url(others/tooltip.png);
-    color: whitesmoke;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 14px;
-    pointer-events: none;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-    z-index: 1000;}
-/* hhttps://codepen.io/sadness97/pen/QWqQYXo */ /* modified to fit my needs */
-@-webkit-keyframes snowflakes-fall {
-	0% {top: -10%}
-	100% {top: 100%}}
-@-webkit-keyframes snowflakes-shake {
-	0%, 100% {-webkit-transform: translateX(0); transform: translateX(0)}
-	50% {-webkit-transform: translateX(80px); transform: translateX(80px)}}
-@keyframes snowflakes-fall {
-	0% {top: -10%}
-	100% {top: 100%}}
-@keyframes snowflakes-shake {
-	0%, 100% {transform: translateX(0)}
-	50% {transform: translateX(80px)}}
 * {
     box-sizing: border-box;}
 #output {
