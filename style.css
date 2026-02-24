@@ -388,3 +388,7 @@ input[type="color"]::-webkit-color-swatch {
     margin: 0;
     padding: 0;
     border: none;}
+.thumbnail {
+    width: 250px;
+    height: 250px;
+}
