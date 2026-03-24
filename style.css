@@ -1,9 +1,3 @@
-@keyframes marquee {
-    0% {transform: translateX(0);}
-    100% {transform: translateX(calc(-100% + var(--container-width)));}}
-@keyframes marquee-reverse {
-    0% {transform: translateX(calc(-100% + var(--container-width)));}
-    100% {transform: translateX(0);}}
 @keyframes scroll {
     0% {transform: translateX(0);}
     100% {transform: translateX(-100%)}}
@@ -31,20 +25,13 @@
     66.667% {transform: rotateX(240deg) rotateY(-15deg) scale(0.7);}
     83.333% {transform: rotateX(300deg) rotateY(-10deg) scale(0.8);}
     100% {transform: rotateX(360deg) rotateY(0deg) scale(.9);}}
-@font-face {
-    font-family: silkscreen;
-    src: url(others/Silkscreen-Regular.ttf);}
-@font-face {
-    font-family: Nunito;
-    font-size: 10px;
-    src: url(others/NunitoSans.ttf);}
 html {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     border: none;
-    font-family: 'Nunito';}
+    font-family: "Roboto";}
 body {
     margin: 0;
     padding: 0;
@@ -56,8 +43,7 @@ body {
     scrollbar-width: none;
     -ms-overflow-style: none;
     display: flex;
-    flex-direction: column;
-    font-family: 'Nunito';}
+    flex-direction: column;}
 header {
     margin: 0;
     padding: 0;
@@ -81,37 +67,16 @@ button {
     margin: 0;
     padding: 1px 6px;
     height: 100%;
-    font-family: inherit;
     font-weight: normal;
-    border: 2px outset "ButtonFace"; 
-    background-color: "ButtonFace";
-    color: "ButtonText";
-    perspective: 500px;
+    color: black;
     cursor: pointer;}
 button:disabled {
     opacity: 1;
     border: 0;
     padding: 3px 8px;
-    font-family: inherit;
-    font-weight: normal;
     background-color: black;
     color: aliceblue;
     cursor: default}
-button span {
-    display: inline-block;
-    transform-origin: center;
-    transform: rotate(0deg);
-    transform-style: preserve-3d;}
-button:hover:not(:disabled) span {
-    animation: arrowU 1s linear infinite;
-    animation-play-state: running;}
-.buttonimg {
-    margin: 0;
-    padding: 0;
-    width: 88px;
-    height: 31px;
-    border: none;
-    background-color: transparent;}
 div {
     margin: 0;
     padding: 0;
@@ -125,52 +90,32 @@ div {
     display: flex;
     flex: 1;
     flex-direction: column;}
-p, h1, h2 {
+p, h2 {
     margin: 0;
     padding: 0;
-    border: none;}
-h3 {
-    margin: 0;
-    padding: 0 10px 0 10px;
     border: none;}
 ul {
     margin: 0;
-    padding: 0;
+    padding: 25px;
     border: none;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;}
+    gap: 25px;}
 li {
     margin: 0;
     padding: 0;
     width: fit-content;
     height: fit-content;
     display: inline-block;
-    border: 1px solid black;
-    background-color: black;
-    background-image:  linear-gradient(#00394b 1px, transparent 1px), linear-gradient(to right, #00394b 1px, #000000 1px);
-    background-size: 10px 10px;}
+    border: 1px solid rgb(100, 100, 100);
+    background-color: rgb(50, 50, 50);}
 audio {
     margin: 0;
     padding: 0;
-    height: 23px;
-    min-width: 361px;
+    height: 25px;
+    min-width: 360px;
     border: none;}
-iframe#main-frame.main-full-width {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    flex: 1;}
-.container.sidebar-container.sidebar-hidden {
-    display: none;}
-img {
-    margin: 0;
-    padding: 0;
-    width: auto;
-    height: auto;
-    border: none;
-    display: block;}
 .website {
     margin: 0;
     padding: 0;
@@ -190,20 +135,6 @@ img {
 .container[style*="flex-direction: row"] {
     flex-direction: row;
     height: calc(100vh - 93px);}
-.container-2 img {
-    margin: 0;
-    padding: 0;
-    width: 50%;
-    height: 100%;
-    object-fit: fill;
-    border: none;}
-.container-3 img {
-    margin: 0;
-    padding: 0;
-    width: 33.33%;
-    height: 100h;
-    object-fit: fill;
-    border: none;}
 .border {
     margin: 0;
     padding: 0;
@@ -224,11 +155,9 @@ img {
     align-items: center;
     text-align: center;
     border: none;}
-a {
-    color: rgb(0, 183, 255);}
 .b {
     margin: 0;
-    padding: 5px 10px 5px 10px;
+    padding: 5px;
     border: none;
     color: aliceblue;
     display: flex;
@@ -239,39 +168,6 @@ a {
     text-align: left;}
 .b .r {
     text-align: right;}
-.marquee-wrapper {
-    max-width: 150px;
-    overflow: hidden;
-    white-space: nowrap;}
-.marquee-wrapper-buttons {
-    width: 100%;
-    overflow: hidden;
-    align-self: center;
-    white-space: nowrap;}
-.marquee-text {
-    display: inline-block;
-    color: aliceblue;
-    background-color: rgba(0,0,0,0.75);
-    white-space: nowrap;
-    align-self: center;
-    animation: scroll linear infinite;}
-.marquee-buttons-inner {
-    display: inline-flex;
-    animation: scroll linear infinite;}
-.marquee-buttons:hover .marquee-buttons-inner {
-    animation-play-state: paused;}
-.arrowU {
-    display: inline-block;
-    transform-style: preserve-3d;
-    animation: arrowU 1s linear infinite;}
-.arrowR {
-    display: inline-block;
-    transform-style: preserve-3d;
-    animation: arrowR 1s linear infinite;}
-.arrowL {
-    display: inline-block;
-    transform-style: preserve-3d;
-    animation: arrowL 1s linear infinite;}
 .centerb {
     margin: 25px;
     padding: 25px;
@@ -298,7 +194,6 @@ a {
     background-size: cover;
     background-position: center;}
 #text {
-    font-family: silkscreen;
     margin: 0;
     padding: 0;
     width: 82px;
@@ -307,7 +202,7 @@ a {
     border: none;
     display: flex;
     overflow: hidden;
-    font-family: Silkscreen, monospace;}
+    font-family: 8px monospace;}
 #input {
     margin: 0;
     padding: 6px;
@@ -318,8 +213,7 @@ a {
     border: none;
     overflow: hidden;
     box-sizing: border-box;
-    font-family: Silkscreen, monospace;
-    font-size: 14px;}
+    font-family: Silkscreen, monospace;}
 input[type="color" i] {
     width: 88px;
     height: 31px;
@@ -328,10 +222,6 @@ input[type="color" i] {
     display: inline-block}
 input[type="color"]::-webkit-color-swatch {
     border: none;}
-textarea {
-    border: 1px solid var(--accent-4);
-    font-family: Space Grotesk;
-    min-height: 50px;}
 input[type="file" i] {
     background-color: var(--bg);
     color: white;}
@@ -340,12 +230,6 @@ input[type="file"] {
 #results {
     width: 88px;
     height: 31px;}
-.preview-panel {
-    min-width: 200px;}
-.option {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;}
 #into-image {
     padding: 10px 10px;
     font-size: 14px;
@@ -355,7 +239,6 @@ input[type="file"] {
 textarea,
 input[type="text"] {
     font-family: inherit;
-    font-size: 12px;
     padding: 6px 8px;
     border: none;
     min-width: 240px;}
@@ -372,7 +255,6 @@ input[type="number"] {
     background-color: #444;
     color: white;
     cursor: pointer;
-    font-size: 14px;
     font-family: Silkscreen, monospace;}
 input[type="radio"],
 input[type="checkbox"] {
