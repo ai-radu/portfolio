@@ -30,3 +30,5 @@ function pMain(mainPage, activeId) {
 window.addEventListener("DOMContentLoaded", () => {
   pMain("games.html", "Button_Main_0");
 });
+
+/* */
