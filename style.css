@@ -111,8 +111,11 @@ audio {
     height: 25px;
     min-width: 360px;
 }
-img {
+img{
     border-radius: 10px;
+}
+img.no-style {
+  all: unset;
 }
 .website {
     margin: 0;
@@ -179,6 +182,14 @@ img {
     flex-direction: column;
     align-items: center;
 }
+.centerrow {
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 * {
     box-sizing: border-box;
 }
@@ -232,4 +243,12 @@ img {
     background-color: var(--weak-color);
     transition: all 0.3s ease;
     border-radius: 5px;
+}
+
+/*Get in touch*/
+.message-field {
+    width: 100%;
+    max-width: 200%;
+    height: 250px;
+    resize: none;
 }
