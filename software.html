@@ -19,13 +19,12 @@
                 <p class="b">Released on DD MM YYYY</p>
                 <p class="b">screenshot*</p>
             </li>
-        </ul>
-        <ul>
+<!--Random Color Generator-->
             <li>
                 <h2 class="center">Random Color Generator</h2>
                 <p class="center">click on one of the boxes to copy the value to clipboard</p>
                 <span class="center">
-                    <button id="generate-btn">
+                    <button id="generate-colors">
                         ⟳ Generate
                     </button>
                 </span>
@@ -61,6 +60,42 @@
                         </div>
                     </div>
                 </ul>
+            </li>
+<!--Password Generator-->
+            <li>
+                <h2 class="center">Random Password Generator</h2>
+                <div class="b password-container">
+                    <input type="text" readonly id="password">
+                    <button id="generate-password">⟳ Generate</button>
+                </div>
+                <div class="b">
+                    <p for="lenght">Password Lenght</p>
+                    <input type="range" min="6" max="32" value="12" id="lenght"></input>
+                    <p id="lenght-value">12</p>
+                </div>
+                <div class="b">
+                    <p for="uppercase">Include Uppercase</p>
+                    <input type="checkbox" checked id="uppercase">
+                </div>
+                <div class="b">
+                    <p for="lowercase">Include Lowercase</p>
+                    <input type="checkbox" checked id="lowercase">
+                </div>
+                <div class="b">
+                    <p for="lowercase">Include Numbers</p>
+                    <input type="checkbox" checked id="numbers">
+                </div>
+                <div class="b">
+                    <p for="lowercase">Include Symbols</p>
+                    <input type="checkbox" checked id="symbols">
+                </div>
+                <div class="b">
+                    <p>Strength</p>
+                    <p id="strength-label">Strong</p>
+                </div>
+                <div>
+                    <div class="strength-bar"></div>
+                </div>
             </li>
         </ul>
         <script src="script.js"></script>

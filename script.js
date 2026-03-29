@@ -31,7 +31,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // freeCodeCamp.org - Color Palette Generator //
-const generateBtn = document.getElementById("generate-btn")
+const generateBtn = document.getElementById("generate-colors")
 const paletteContainer = document.querySelector(".palette-container")
 
 generateBtn.addEventListener("click", generatePalette)
@@ -83,3 +83,5 @@ function updatePaletteDisplay(colors) {
 }
 
 generatePalette();
+
+// freeCodeCamp.org - Password Generator //
