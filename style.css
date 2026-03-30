@@ -198,6 +198,33 @@ img.no-style {
 .full {
     width: 100%;
 }
+/*Calculator*/
+.cbase {
+    margin: 0;
+    padding: 0px 5px 5px 5px;
+    border: none;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    text-align: center;
+}
+.cbtn {
+    margin: 5px;
+    padding: 0;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 0 2.5px 5px rgba(0,0,0,0.5);
+    font-weight: bold;
+}
+.cbtn:hover {
+    transform: translateY(0px);
+}
+.cbtn:active {
+    transform: translateY(5px);
+}
 /*Color Palette Generator*/
 .color-box {
     width: 200px;
@@ -208,6 +235,9 @@ img.no-style {
 }
 .color-box:hover {
     transform: translateY(-15px);
+}
+.color-box:active {
+    transform: translateY(0px);
 }
 .color {
     height: 182.5px;
