@@ -97,11 +97,11 @@ ul {
 li {
     margin: 0;
     padding: 0;
-    width: fit-content;
-    height: fit-content;
+    border: none;
+    width: max-content;
+    height: max-content;
     display: inline-block;
     border-radius: 10px;
-    /*border: 1px solid rgb(255, 255, 255);*/
     box-shadow: 0 5px 10px rgba(0,0,0,0.5);
 }
 audio {
@@ -112,7 +112,10 @@ audio {
     min-width: 360px;
 }
 img{
+    margin: 0;
+    padding: 0;
     border-radius: 10px;
+    display: block;
 }
 img.no-style {
   all: unset;
@@ -123,6 +126,7 @@ img.no-style {
     max-width: 150px;
     min-width: 20px;
     max-height: 41px;
+    border: none;
 }
 .container {
     margin: 0;
@@ -141,6 +145,7 @@ img.no-style {
 .border {
     margin: 0;
     padding: 0;
+    border: none;
     color: aliceblue;
     display: flex;
     justify-content: space-between;
@@ -188,6 +193,7 @@ img.no-style {
 .thumbnail {
     width: 250px;
     height: 250px;
+    border: none;
 }
 select {
     width: 100%;
