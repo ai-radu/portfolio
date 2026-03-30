@@ -10,7 +10,18 @@
             <li>
                 <h2 class="center">Title</h2>
                 <p class="b">
-                    <span class="l">OS</span>
+                    <span class="l">Version</span>
+                    <span class="r">0.0.0.0</span>
+                </p>
+                <p class="b">
+                    <span class="l">Final Build</span>
+                    <span class="r">
+                        - MB
+                        <button onclick="window.open('')">Download</button>
+                    </span>
+                </p>
+                <p class="b">
+                    <span class="l">Source Code</span>
                     <span class="r">
                         - MB
                         <button onclick="window.open('')">Download</button>
@@ -23,7 +34,7 @@
             <li>
                 <h2 class="center">Password Generator</h2>
                 <div class="b password-container">
-                    <input type="text" readonly id="password">
+                    <input class="full" type="text" readonly id="password">
                     <button id="generate-password">Generate</button>
                 </div>
                 <div class="b">
@@ -65,7 +76,7 @@
                     </div>
                     <div class="center">
                         <label for = "from-currency">From</label>
-                        <select id="from-currency"></select>
+                        <select class="full" id="from-currency"></select>
                     </div>
                     <div class="center">
                         <label for = "to-currency">To</label>
