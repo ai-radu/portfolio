@@ -30,61 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
     pMain("games.html", "Button_Main_0");
 });
 
-// freeCodeCamp.org - Color Palette Generator //
-const generateColors = document.getElementById("generate-colors")
-const paletteContainer = document.querySelector(".palette-container")
-
-generateColors.addEventListener("click", generatePalette)
-
-document.addEventListener("click", function (e) {
-    const box = e.target.closest(".color-box")
-
-    if (box) {
-        const hexValue = box.querySelector(".hex-value").textContent
-
-        navigator.clipboard.writeText(hexValue)
-            .then(() => console.log("Copied:", hexValue))
-            .catch(err => console.error("Copy failed", err))
-    }
-})
-
-function generatePalette() {
-    const colors = []
-
-    for (let i = 0; i<5; i++) {
-        colors.push(generateRandomColor())
-    }
-
-    updatePaletteDisplay(colors)
-}
-
-function generateRandomColor() {
-    const letters = "0123456789ABCDEF"
-    let color = "#"
-
-    for (let i = 0; i<6; i++) {
-        color += letters[Math.floor(Math.random() * 16)]
-    }
-
-    return color
-}
-
-function updatePaletteDisplay(colors) {
-    const colorBoxes = document.querySelectorAll(".color-box")
-
-    colorBoxes.forEach((box, index) => {
-        const color = colors[index]
-        const colorDiv = box.querySelector(".color")
-        const hexValue = box.querySelector(".hex-value")
-
-        colorDiv.style.backgroundColor = color;
-        hexValue.textContent = color;
-    })
-}
-
-generatePalette();
-
-// freeCodeCamp.org - Password Generator //
+// Password Generator //
 const passwordInput = document.getElementById("password");
 const lengthSlider = document.getElementById("length-slider");
 const lengthDisplay = document.getElementById("length-value");
@@ -185,4 +131,110 @@ function createRandomPassword(length, includeUppercase, includeLowercase, includ
     return password;
 }
 
+// Currency Converter //
+const convertForm = document.getElementById("converter-form")
+const amountInput = document.getElementById("amount-currency")
+const fromCurrency = document.getElementById("from-currency")
+const toCurrency = document.getElementById("to-currency")
+const resultDiv = document.getElementById("result-currency")
+
+window.addEventListener("load", fetchCurrencies)
+convertForm.addEventListener("submit", convertCurrency)
+
+async function fetchCurrencies() {
+    const response = await fetch("https://api.exchangerate-api.com/v4/latest/EUR")
+    const data = await response.json()
+    const currencyOptions = Object.keys(data.rates)
+    
+    currencyOptions.forEach(currency => {
+        const optionFrom = document.createElement("option")
+        optionFrom.value = currency;
+        optionFrom.textContent = currency;
+        fromCurrency.appendChild(optionFrom)
+
+        const optionTo = document.createElement("option")
+        optionTo.value = currency;
+        optionTo.textContent = currency;
+        toCurrency.appendChild(optionTo)
+    })
+
+    fromCurrency.value = "EUR"
+    toCurrency.value = "USD"
+}
+
+async function convertCurrency(e) {
+    e.preventDefault()
+
+    const amount = parseFloat(amountInput.value)
+    const fromCurrencyValue = fromCurrency.value
+    const toCurrencyValue = toCurrency.value
+
+    if (amount <= 0) {
+        alert("no");
+        return;
+    }
+    
+    const response = await fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrencyValue}`)
+    const data = await response.json()
+
+    const rate = data.rates[toCurrencyValue]
+    const convertedAmount = (amount * rate).toFixed(2)
+    resultDiv.textContent = `${amount} ${fromCurrencyValue} = ${convertedAmount} ${toCurrencyValue}`;
+}
+
+// Color Palette Generator //
+const generateColors = document.getElementById("generate-colors")
+const paletteContainer = document.querySelector(".palette-container")
+
+generateColors.addEventListener("click", generatePalette)
+
+document.addEventListener("click", function (e) {
+    const box = e.target.closest(".color-box")
+
+    if (box) {
+        const hexValue = box.querySelector(".hex-value").textContent
+
+        navigator.clipboard.writeText(hexValue)
+            .then(() => console.log("Copied:", hexValue))
+            .catch(err => console.error("Copy failed", err))
+    }
+})
+
+function generatePalette() {
+    const colors = []
+
+    for (let i = 0; i<5; i++) {
+        colors.push(generateRandomColor())
+    }
+
+    updatePaletteDisplay(colors)
+}
+
+function generateRandomColor() {
+    const letters = "0123456789ABCDEF"
+    let color = "#"
+
+    for (let i = 0; i<6; i++) {
+        color += letters[Math.floor(Math.random() * 16)]
+    }
+
+    return color
+}
+
+function updatePaletteDisplay(colors) {
+    const colorBoxes = document.querySelectorAll(".color-box")
+
+    colorBoxes.forEach((box, index) => {
+        const color = colors[index]
+        const colorDiv = box.querySelector(".color")
+        const hexValue = box.querySelector(".hex-value")
+
+        colorDiv.style.backgroundColor = color;
+        hexValue.textContent = color;
+    })
+}
+
+// Finish //
+
+generatePalette();
 window.addEventListener("DOMContentLoaded", makePassword);
