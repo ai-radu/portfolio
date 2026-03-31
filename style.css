@@ -1,3 +1,15 @@
+/*
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes spin {
+  to {
+    --angle: 360deg;
+  }
+}
+*/
 :root {
     --weak-color: #fc8181;
     --medium-color: #fbd38d;
@@ -17,13 +29,15 @@ body {
     width: 100%;
     height: 100vh;
     border: none;
-    background: linear-gradient(25deg, #0B486B, #dd5510) no-repeat fixed;
     color: aliceblue;
     overflow: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
     display: flex;
     flex-direction: column;
+    --angle: 25deg;
+    background: linear-gradient(var(--angle), #0b366e, #dd5510);
+    animation: spin 60s linear infinite;
 }
 header {
     margin: 0;
