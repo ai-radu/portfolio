@@ -3,13 +3,7 @@
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
-}
-@keyframes spin {
-  to {
-    --angle: 360deg;
-  }
-}
-*/
+} */
 :root {
     --weak-color: #fc8181;
     --medium-color: #fbd38d;
@@ -35,9 +29,22 @@ body {
     -ms-overflow-style: none;
     display: flex;
     flex-direction: column;
-    --angle: 25deg;
-    background: linear-gradient(var(--angle), #0b366e, #dd5510);
-    animation: spin 60s linear infinite;
+}
+body::before {
+    content: "";
+    position: fixed;
+    inset: -50%;
+    background: linear-gradient(25deg, #0b366e, #dd5510);
+    z-index: -1;
+    animation: spin 10s linear infinite;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 header {
     margin: 0;
@@ -161,6 +168,7 @@ img.no-style {
     padding: 0;
     border: none;
     color: aliceblue;
+    background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
