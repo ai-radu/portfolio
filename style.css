@@ -36,15 +36,6 @@ body::before {
     inset: -50%;
     background: linear-gradient(25deg, #0b366e, #dd5510);
     z-index: -1;
-    animation: spin 10s linear infinite;
-}
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }
 header {
     margin: 0;
