@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+    <head>
+        <title>software</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <p>all under CC0</p>
+        <ul>
+            <li>
+                <h2 class="center">Title</h2>
+                <p class="b">Released on DD MM YYYY</p>
+                <p class="b">
+                    <span class="l">Version</span>
+                    <span class="r">0.0.0.0</span>
+                </p>
+                <p class="b">
+                    <span class="l">Final Build</span>
+                    <span class="r">
+                        - MB
+                        <button>Download</button>
+                    </span>
+                </p>
+                <p class="b">
+                    <span class="l">Source Code</span>
+                    <span class="r">
+                        - MB
+                        <button>Download</button>
+                    </span>
+                </p>
+                <img src="others/fallback.png"/>
+            </li>
+<!--Password Generator-->
+            <li>
+                <h2 class="center">Password Generator</h2>
+                <div class="b password-container">
+                    <input class="full" type="text" readonly id="password">
+                    <button id="generate-password">Generate</button>
+                </div>
+                <div class="b">
+                    <p for="length-slider">Password Length</p>
+                    <input type="range" min="12" max="64" value="16" id="length-slider"></input>
+                    <p id="length-value">16</p>
+                </div>
+                <div class="b">
+                    <p for="uppercase">Include Uppercase</p>
+                    <input type="checkbox" checked id="uppercase">
+                </div>
+                <div class="b">
+                    <p for="lowercase">Include Lowercase</p>
+                    <input type="checkbox" checked id="lowercase">
+                </div>
+                <div class="b">
+                    <p for="lowercase">Include Numbers</p>
+                    <input type="checkbox" checked id="numbers">
+                </div>
+                <div class="b">
+                    <p for="lowercase">Include Symbols</p>
+                    <input type="checkbox" checked id="symbols">
+                </div>
+                <div class="b strength-container">
+                    <p>Strength</p>
+                    <p id="strength-label">Not Accurate*</p>
+                </div>
+                <div class="strength-meter">
+                    <div id="strength-bar" class="strength-bar"></div>
+                </div>
+            </li>
+<!--Currency Converter-->
+            <li>
+                <h2 class="center">Currency Converter</h2>
+                <form id="converter-form">
+                    <div class="center">
+                        <label for = "amount-currency">Amount</label>
+                        <input type="number" id="amount-currency" placeholder="Enter amount" value="100" required style="width: 100%;">
+                    </div>
+                    <div class="center">
+                        <label for = "from-currency">From</label>
+                        <select class="full" id="from-currency"></select>
+                    </div>
+                    <div class="center">
+                        <label for = "to-currency">To</label>
+                        <select class="full" id="to-currency"></select>
+                    </div>
+                    <div class="center">
+                        <button class="center" type="submit">Convert</button>
+                    </div>
+                    <div class="center">
+                        <p id="result-currency">Amount</p>
+                    </div>
+                </form>
+            </li>
+<!--Calculator-->
+            <li>
+                <div>
+                    <h2 class="center">Calculator</h2>
+                    <div class="center" style="margin: 0px 10px 0px 10px;">
+                        <input class="full" type="text" readonly id="result-calculator">
+                    </div>
+                    <div class="cbase">
+                        <div class="b">
+                            <button class="cbtn">7</button>
+                            <button class="cbtn">8</button>
+                            <button class="cbtn">9</button>
+                            <button class="cbtn">C</button>
+                        </div>
+                        <div class="b">
+                            <button class="cbtn">4</button>
+                            <button class="cbtn">5</button>
+                            <button class="cbtn">6</button>
+                            <button class="cbtn">/</button>
+                        </div>
+                        <div class="b">
+                            <button class="cbtn">1</button>
+                            <button class="cbtn">2</button>
+                            <button class="cbtn">3</button>
+                            <button class="cbtn">X</button>
+                        </div>
+                        <div class="b">
+                            <button class="cbtn">0</button>
+                            <button class="cbtn">+</button>
+                            <button class="cbtn">-</button>
+                            <button class="cbtn">=</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+<!--Random Color Generator-->
+            <li>
+                <h2 class="center">Random Color Generator</h2>
+                <p class="center">click on one of the boxes to copy the value to clipboard</p>
+                <span class="center">
+                    <button id="generate-colors">
+                        ⟳ Generate
+                    </button>
+                </span>
+                <ul>
+                    <div class="color-box">
+                        <div class="color" style="background-color: rgb(238, 255, 0)"></div>
+                        <div class="color-info">
+                            <span class="hex-value">text</span>
+                        </div>
+                    </div>
+                    <div class="color-box">
+                        <div class="color" style="background-color: rgb(160, 15, 111)"></div>
+                        <div class="color-info">
+                            <span class="hex-value">text</span>
+                        </div>
+                    </div>
+                    <div class="color-box">
+                        <div class="color" style="background-color: rgb(107, 182, 125)"></div>
+                        <div class="color-info">
+                            <span class="hex-value">text</span>
+                        </div>
+                    </div>
+                    <div class="color-box">
+                        <div class="color" style="background-color: rgb(17, 83, 138)"></div>
+                        <div class="color-info">
+                            <span class="hex-value">text</span>
+                        </div>
+                    </div>
+                    <div class="color-box">
+                        <div class="color" style="background-color: rgb(172, 25, 25)"></div>
+                        <div>
+                            <span class="hex-value">text</span>
+                        </div>
+                    </div>
+                </ul>
+            </li>
+        </ul>
+        <script src="script.js"></script>
+    </body>
+</html>
