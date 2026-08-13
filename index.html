@@ -9,64 +9,506 @@
         <link rel="icon" href="others/website.ico" />
         <link rel="stylesheet" href="style.css" />
     </head>
-    <body style="flex-direction: row">
-        <div class="div2" style="display: flex; flex-direction: column; height: 100vh">
-            <header class="border">
-                <button
-                    id="Button_Main_0"
-                    style="flex: 1"
-                    onclick="pMain('games.html', 'Button_Main_0')"
-                    aria-label="View Games Category"
-                    aria-current="true">
-                        Games
+   <body>
+        <ul>
+<!--links-->
+            <li>
+                <div class="center" style="width: 165px;">
+                    <h2>Other Links</h2>
+                    <p class="b full">
+                        <span>itch.io</span>
+                        <button onclick="window.open('https://airadu.itch.io/')">Link</button>
+                    </p>
+                    <p class="b full">
+                        <span>github</span>
+                        <button onclick="window.open('https://github.com/ai-radu')">Link</button>
+                    </p>
+                    <p class="b full">
+                        <span>instagram</span>
+                        <button onclick="window.open('https://www.instagram.com/a1.radu/')">Link</button>
+                    </p>
+                    <p class="b full">
+                        <span>x</span>
+                        <button onclick="window.open('https://twitter.com/_ai_radu_')">Link</button>
+                    </p>
+                    <p class="b full">
+                        <span>youtube</span>
+                        <button onclick="window.open('https://www.youtube.com/channel/UCLiQzfz6qrO1wjnO6-KsONg')">Link</button>
+                    </p>
+                    <p class="b full">
+                        <span>twitch</span>
+                        <button onclick="window.open('https://www.twitch.tv/ai_radu')">Link</button>
+                    </p>
+                    <p class="b full">
+                        <span>kick</span>
+                        <button onclick="window.open('https://kick.com/ai-radu')">Link</button>
+                    </p>
+                    <p class="b full">
+                        <span>ko-fi</span>
+                        <button onclick="window.open('https://ko-fi.com/airadu')">Link</button>
+                    </p>
+                    <p class="b full">
+                        <span>patreon</span>
+                        <button onclick="window.open('http://patreon.com/airadu')">Link</button>
+                    </p>
+                    <p class="b full">
+                        <span>paypal</span>
+                        <button onclick="window.open('https://www.paypal.com/donate?hosted_button_id=ZLHC3GT7EWKZ4')">Link</button>
+                    </p>
+                </div>
+            </li>
+<!--about-->
+            <li>
+                <div class="center" style="width: 365px;">
+                    <h2>About</h2>
+                    <p>
+                        I need a place where i can just dump all the things i make. There is
+                        no other reason for this website to exist. Those are my buttons, if
+                        you wanna link back. Please don't reference, download. And the
+                        thingy: &lt;button
+                        onclick="window.open('https://ai-radu.github.io/portfolio/','_blank')"&gt;&lt;/button&gt;
+                    </p>
+                    <ul>
+                        <img class="no-style" src="others/airaduportfolio.gif" style="width: 88px; height: 31px"/>
+                        <img class="no-style" src="others/airaduportfolio2.gif" style="width: 88px; height: 31px"/>
+                        <img class="no-style" src="others/airaduportfolio3.gif" style="width: 88px; height: 31px"/>
+                        <img class="no-style" src="others/airaduportfolio4.gif" style="width: 88px; height: 31px"/>
+                    </ul>
+                </div>
+            </li>
+<!--aur30la-->
+            <li>
+                <img src="others/fallback.png"/>
+                <h2 class="center">AUR30LA</h2>
+                <p class="b">Released on 15 May 2026</p>
+                <p class="b">3D Game Engine</p>
+                <p class="b">
+                    <span class="l">Linux</span>
+                    <button onclick="window.open('https://github.com/ai-radu/AUR30LA',)"
+                    aria-label="Open Github link in a new tab">
+                    More Info
                 </button>
-                <button
-                    id="Button_Main_1"
-                    style="flex: 1"
-                    onclick="pMain('hardware.html', 'Button_Main_1')"
-                    aria-label="View Hardware Category">
-                        Hardware
-                </button>
-                <button
-                    id="Button_Main_2"
-                    style="flex: 1"
-                    onclick="pMain('software.html', 'Button_Main_2')"
-                    aria-label="View Software Category">
-                        Software
-                </button>
-                <button
-                    id="Button_Main_3"
-                    style="flex: 1"
-                    onclick="pMain('3d_models.html', 'Button_Main_3')"
-                    aria-label="View 3D Models Category">
-                        3D Models
-                </button>
-                <button
-                    id="Button_Main_4"
-                    style="flex: 1"
-                    onclick="pMain('textures.html', 'Button_Main_4')"
-                    aria-label="View Textures Category">
-                        Textures
-                </button>
-                <button
-                    id="Button_Main_5"
-                    style="flex: 1"
-                    onclick="pMain('audio.html', 'Button_Main_5')"
-                    aria-label="View Audio Category">
-                        Audio
-                </button>
-                <button
-                    id="Button_Main_6"
-                    style="flex: 1"
-                    onclick="pMain('others.html', 'Button_Main_6')"
-                    aria-label="View Others Category">
-                        Others
-                </button>
-            </header>
-            <div class="container" style="flex-direction: row">
-                <iframe id="main-frame" src="games.html"></iframe>
-            </div>
-        </div>
-        <script defer src="script.js"></script>
+                </p>
+            </li>
+<!--games-->
+            <li>
+                <img src="games/cornerstoresimulator.gif"/>
+                <h2 class="center">Corner Store Simulator</h2>
+                <p class="b">Released on 12 March 2026</p>
+                <p class="b">Unreal Engine 5.3</p>
+                <p class="b">Really Bad Anomaly game</p>
+            </li>
+            <li>
+                <img src="games/firekeeper.gif"/>
+                <h2 class="center">Firekeeper</h2>
+                <p class="b">Released on 22 February 2026</p>
+                <p class="b">Unreal Engine 5.4</p>
+                <p class="b">Cozy Winter Jam 2026</p>
+            </li>
+            <li>
+                <img src="games/subtletremor.gif"/>
+                <h2 class="center">Subtle Tremor</h2>
+                <p class="b">Released on 4 February 2026</p>
+                <p class="b">Unreal Engine 4.7</p>
+                <p class="b">Boring First Person Shooter</p>
+            </li>
+            <li>
+                <img src="games/floppytheflippinplane.gif"/>
+                <h2 class="center">Floppy The Flippin Plane</h2>
+                <p class="b">Released on 17 August 2025</p>
+                <p class="b">Unreal Engine 5.3</p>
+                <p class="b">Really Bad Flappy Bird Clone</p>
+            </li>
+            <li>
+                <img src="games/zero.gif"/>
+                <h2 class="center">Zero</h2>
+                <p class="b">Released on 8 August 2025</p>
+                <p class="b">Unreal Engine 5.3</p>
+                <p class="b">GMTK Game Jam 2025</p>
+            </li>
+            <li>
+                <img src="games/cuttingtheice.gif"/>
+                <h2 class="center">Cutting The Ice</h2>
+                <p class="b">Released on 19 August 2024</p>
+                <p class="b">Unreal Engine 5.0</p>
+                <p class="b">First released game</p>
+            </li>
+<!--3d models-->
+            <li>
+                <p class="b">
+                    <span>Broom_Green</span>                
+                    <button onclick="window.open('https://drive.google.com/uc?export=download&id=1_qt_TCOmlmIVArIvVd-I7eNx2EZTE3Mz')"
+                        aria-label="Open Google Drive link in a new tab">
+                        Download
+                    </button>
+                </p>
+                <img src="3d-models/broomgreen.gif" /></p>
+            </li>
+            <li>
+                <p class="b">
+                    <span>Hallway_Light_0</span>
+                    <button onclick="window.open('https://drive.google.com/uc?export=download&id=1Tlfk7uTH2_QbljNvaWD7Ix_kRDKAxcJK',)"
+                        aria-label="Open Google Drive link in a new tab">
+                        Download
+                    </button>
+                </p>
+                <img src="3d-models/hallwaylight0.gif" /></p>
+            </li>
+            <li>
+                <p class="b">
+                    <span>Knife_Kitchen_0</span>
+                    <button onclick="window.open('https://drive.google.com/uc?export=download&id=15YZQKBj91saKIQYBfIZzso1ppSkbMIc6',)"
+                        aria-label="Open Google Drive link in a new tab">
+                        Download
+                    </button>
+                </p>
+                <img src="3d-models/knifekitchen0.gif" /></p>
+            </li>
+            <li>
+                <p class="b">
+                    <span>Lighter</span>
+                    <button onclick="window.open('https://drive.google.com/uc?export=download&id=1UVUIRmiwq8y0vySls4gLLGYlTb8Kfywp',)"
+                        aria-label="Open Google Drive link in a new tab">
+                        Download
+                    </button>
+                </p>
+                <img src="3d-models/lighter.gif" /></p>
+            </li>
+            <li>
+                <p class="b">
+                    <span>Sign_Exit_Small</span>
+                    <button onclick="window.open('https://drive.google.com/uc?export=download&id=18-w-tzYqMsmbV_2Yqbz10xHvxlOaPS-E')"
+                        aria-label="Open Google Drive link in a new tab">
+                        Download
+                    </button>
+                </p>
+                <img src="3d-models/signexitsmall.gif" /></p>
+            </li>
+<!--textures-->
+            <li>
+                <p class="b">Atlas_T</p>
+                <img src="textures/Atlas_T.png" class="thumbnail"/>
+            </li>
+            <li>
+                <p class="b">Bush_0_T</p>
+                <img src="textures/Bush_0_T.jpg" class="thumbnail"/>
+            </li>
+            <li>
+                <p class="b">Concrete_T</p>
+                <img src="textures/Concrete_T.jpg" class="thumbnail"/>
+            </li>
+            <li>
+                <p class="b">Door_Metal_0_T</p>
+                <img src="textures/Door_Metal_0_T.png" class="thumbnail"/>
+            </li>
+            <li>
+                <p class="b">Door_Metal_1_T</p>
+                <img src="textures/Door_Metal_1_T.png" class="thumbnail"/>
+            </li>
+            <li>
+                <p class="b">Door_Metal_2_T</p>
+                <img src="textures/Door_Metal_2_T.png" class="thumbnail"/>
+            </li>
+            <li>
+                <p class="b">Door_Metal_3_T</p>
+                <img src="textures/Door_Metal_3_T.png" class="thumbnail"/>
+            </li>
+            <li>
+                <p class="b">Fabric_White_T</p>
+                <img src="textures/Fabric_White_T.jpg" class="thumbnail"/>
+            </li>
+            <li>
+                <p class="b">Grass_0_T</p>
+                <img src="textures/Grass_0_T.jpg" class="thumbnail"/>
+            </li>
+            <li>
+                <p class="b">Pavement_0_T</p>
+                <img src="textures/Pavement_0_T.png" class="thumbnail"/>
+            </li>
+            <li>
+                <p class="b">Pavement_1_T</p>
+                <img src="textures/Pavement_1_T.png" class="thumbnail"/>
+            </li>
+            <li>
+                <p class="b">Spaceship on sand</p>
+                <img src="textures/Spaceship on sand.png" class="thumbnail"/>
+            </li>
+            <li>
+                <p class="b">Stars</p>
+                <img src="textures/Stars.png" class="thumbnail"/>
+            </li>
+            <li>
+                <p class="b">Tree_0_T</p>
+                <img src="textures/Tree_0_T.jpg" class="thumbnail"/>
+            </li>
+            <li>
+                <p class="b">Wall_White_0_T</p>
+                <img src="textures/Wall_White_0_T.png" class="thumbnail"/>
+            </li>
+            <li>
+                <p class="b">Wall_White_1_T</p>
+                <img src="textures/Wall_White_1_T.png" class="thumbnail"/>
+            </li>
+            <li>
+                <p class="b">Wall_Yellow_T</p>
+                <img src="textures/Wall_Yellow_T.png" class="thumbnail"/>
+            </li>
+<!--audio-->
+            <li>
+                <p class="b"><span>Arkano Club</span>Theme Song</p>
+                <p class="b">
+                    <audio controls>
+                        <source src="audio/arkanoclubthemesong.mp3" type="audio/mp3"/>
+                    </audio>
+                </p>
+            </li>
+            <li>
+                <p class="b"><span>Corner Store Simulator</span>Strange Times</p>
+                <p class="b">
+                    <audio controls>
+                        <source src="audio/cornerstoresimulatorstrangetimes.mp3" type="audio/mp3"/>
+                    </audio>
+                </p>
+            </li>
+            <li>
+                <p class="b"><span>Corner Store Simulator</span>Theme Song 0</p>
+                <p class="b">
+                    <audio controls>
+                        <source src="audio/cornerstoresimulatorthemesong0.mp3" type="audio/mp3"/>
+                    </audio>
+                </p>
+            </li>
+            <li>
+                <p class="b"><span>Corner Store Simulator</span>Theme Song 1</p>
+                <p class="b">
+                    <audio controls>
+                        <source src="audio/cornerstoresimulatorthemesong1.mp3" type="audio/mp3"/>
+                    </audio>
+                </p>
+            </li>
+            <li>
+                <p class="b"><span>Floppy The Flippin Plane</span>Theme Song</p>
+                <p class="b">
+                    <audio controls>
+                        <source src="audio/floppytheflippinplane.mp3" type="audio/mp3" />
+                    </audio>
+                </p>
+            </li>
+            <li>
+                <p class="b"><span>Full Auto Mayhem</span>Radio</p>
+                <p class="b">
+                    <audio controls>
+                        <source src="audio/fullautomayhemradio.mp3" type="audio/mp3" />
+                    </audio>
+                </p>
+            </li>
+            <li>
+                <p class="b"><span>Intergalactic Anti-Invaders</span>Theme Song</p>
+                <p class="b">
+                    <audio controls>
+                        <source src="audio/intergalacticantiinvadersthemesong.mp3" type="audio/mp3"/>
+                    </audio>
+                </p>
+            </li>
+            <li>
+                <p class="b"><span>Light Bomb Challenge</span>Theme Song 0</p>
+                <p class="b">
+                    <audio controls>
+                        <source src="audio/lightbombchallengethemesong0.mp3" type="audio/mp3"/>
+                    </audio>
+                </p>
+            </li>
+            <li>
+                <p class="b"><span>Light Bomb Challenge</span>Theme Song 1</p>
+                <p class="b">
+                    <audio controls>
+                        <source src="audio/lightbombchallengethemesong1.mp3" type="audio/mp3"/>
+                    </audio>
+                </p>
+            </li>
+            <li>
+                <p class="b"><span>Light Bomb Challenge</span>You Died Screen</p>
+                <p class="b">
+                    <audio controls>
+                        <source src="audio/lightbombchallengeyoudiedscreen.mp3" type="audio/mp3"/>
+                    </audio>
+                </p>
+            </li>
+            <li>
+                <p class="b"><span>No More Bread</span>Theme Song</p>
+                <p class="b">
+                    <audio controls>
+                        <source src="audio/nomorebreadthemesong.mp3" type="audio/mp3" />
+                    </audio>
+                </p>
+            </li>
+            <li>
+                <p class="b"><span>Reprogram Files</span>Theme Song</p>
+                <p class="b">
+                    <audio controls>
+                        <source src="audio/reprogramfilesthemesong.mp3" type="audio/mp3" />
+                    </audio>
+                </p>
+            </li>
+            <li>
+                <p class="b"><span>Runes Of The Dead</span>Elevator Music</p>
+                <p class="b">
+                    <audio controls>
+                        <source src="audio/runesofthedeadelevatormusic.mp3" type="audio/mp3"/>
+                    </audio>
+                </p>
+            </li>
+            <li>
+                <p class="b"><span>Runes Of The Dead</span>Jimmy's Basement</p>
+                <p class="b">
+                    <audio controls>
+                        <source src="audio/runesofthedeadjimmysbasement.mp3" type="audio/mp3"/>
+                    </audio>
+                </p>
+            </li>
+            <li>
+                <p class="b"><span>Runes Of The Dead</span>Theme Song</p>
+                <p class="b">
+                    <audio controls>
+                        <source src="audio/runesofthedeadthemesong.mp3" type="audio/mp3" />
+                    </audio>
+                </p>
+            </li>
+            <li>
+                <p class="b"><span>Runes Of The Dead</span>Save Desk</p>
+                <p class="b">
+                    <audio controls>
+                    <source src="audio/runesofthedeadsavedesk.mp3" type="audio/mp3" />
+                    </audio>
+                </p>
+            </li>
+            <li>
+                <p class="b"><span>Subtle Tremor</span>Helicopter</p>
+                <p class="b">
+                    <audio controls>
+                        <source src="audio/subtletremorhelicopter.mp3" type="audio/mp3" />
+                    </audio>
+                </p>
+            </li>
+            <li>
+                <p class="b"><span>Zero</span>Theme Song</p>
+                <p class="b">
+                    <audio controls>
+                        <source src="audio/zerothemesong.mp3" type="audio/mp3" />
+                    </audio>
+                </p>
+            </li>
+            <li>
+                <p class="b"><span>Zero</span>Secret Zone</p>
+                <p class="b">
+                    <audio controls>
+                        <source src="audio/zerosecretzone.mp3" type="audio/mp3" />
+                    </audio>
+                </p>
+            </li>
+<!--currency converter-->
+            <li>
+                <h2 class="center">Currency Converter</h2>
+                <form id="converter-form">
+                    <div class="center">
+                        <label for = "amount-currency">Amount</label>
+                        <input type="number" id="amount-currency" placeholder="Enter amount" value="100" required style="width: 100%;">
+                    </div>
+                    <div class="center">
+                        <label for = "from-currency">From</label>
+                        <select class="full" id="from-currency"></select>
+                    </div>
+                    <div class="center">
+                        <label for = "to-currency">To</label>
+                        <select class="full" id="to-currency"></select>
+                    </div>
+                    <div class="center">
+                        <button class="center" type="submit">Convert</button>
+                    </div>
+                    <div class="center">
+                        <p id="result-currency">Amount</p>
+                    </div>
+                </form>
+            </li>
+<!--password generator-->
+            <li>
+                <h2 class="center">Password Generator</h2>
+                <div class="b password-container">
+                    <input class="full" type="text" readonly id="password">
+                    <button id="generate-password">Generate</button>
+                </div>
+                <div class="b">
+                    <p for="length-slider">Password Length</p>
+                    <input type="range" min="12" max="64" value="16" id="length-slider"></input>
+                    <p id="length-value">16</p>
+                </div>
+                <div class="b">
+                    <p for="uppercase">Include Uppercase</p>
+                    <input type="checkbox" checked id="uppercase">
+                </div>
+                <div class="b">
+                    <p for="lowercase">Include Lowercase</p>
+                    <input type="checkbox" checked id="lowercase">
+                </div>
+                <div class="b">
+                    <p for="lowercase">Include Numbers</p>
+                    <input type="checkbox" checked id="numbers">
+                </div>
+                <div class="b">
+                    <p for="lowercase">Include Symbols</p>
+                    <input type="checkbox" checked id="symbols">
+                </div>
+                <div class="b strength-container">
+                    <p>Strength</p>
+                    <p id="strength-label">Not Accurate*</p>
+                </div>
+                <div class="strength-meter">
+                    <div id="strength-bar" class="strength-bar"></div>
+                </div>
+            </li>
+<!--random color generator-->
+            <li>
+                <h2 class="center">Random Color Generator</h2>
+                <p class="center">click on one of the boxes to copy the value to clipboard</p>
+                <span class="center">
+                    <button id="generate-colors">
+                        ⟳ Generate
+                    </button>
+                </span>
+                <ul>
+                    <div class="color-box">
+                        <div class="color" style="background-color: rgb(238, 255, 0)"></div>
+                        <div class="color-info">
+                            <span class="hex-value">text</span>
+                        </div>
+                    </div>
+                    <div class="color-box">
+                        <div class="color" style="background-color: rgb(160, 15, 111)"></div>
+                        <div class="color-info">
+                            <span class="hex-value">text</span>
+                        </div>
+                    </div>
+                    <div class="color-box">
+                        <div class="color" style="background-color: rgb(107, 182, 125)"></div>
+                        <div class="color-info">
+                            <span class="hex-value">text</span>
+                        </div>
+                    </div>
+                    <div class="color-box">
+                        <div class="color" style="background-color: rgb(17, 83, 138)"></div>
+                        <div class="color-info">
+                            <span class="hex-value">text</span>
+                        </div>
+                    </div>
+                    <div class="color-box">
+                        <div class="color" style="background-color: rgb(172, 25, 25)"></div>
+                        <div>
+                            <span class="hex-value">text</span>
+                        </div>
+                    </div>
+                </ul>
+            </li>
+        </ul>
+        <script src="script.js"></script>
     </body>
 </html>
